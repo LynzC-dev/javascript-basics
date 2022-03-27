@@ -68,19 +68,30 @@ function isEven(a) {
 
 function isSquare(a) {
   // your code here
- 
-};
+//  if (Number.isInteger(Math.sqrt(a))) {
+//    return true;
+//  }
+//  else return false;
 
 function startsWith(char, string) {
   // your code here
+  if (string[0] === char) {
+    return true;
+  }
+  else return false;
 };
 
 function containsVowels(string) {
   // your code here
+
 };
 
 function isLowerCase(string) {
   // your code here
+  if (string === string.toLowerCase()) {
+    return true;
+  }
+  else return false;
 };
 
 module.exports = {
