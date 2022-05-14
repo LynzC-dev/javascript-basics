@@ -1,8 +1,8 @@
 const createPerson = (name, age) => {
   // your code here
 return {
-  name: name,
-  age: age,
+  name:name,
+  age:age,
 }
 };
 
@@ -26,12 +26,12 @@ const isOver65 = person => {
   if (person.age > 65) {
     return true;
   }
-  else { return false;}
+  else { return false}
 };
 
 const getAges = people => {
   // your code here
-  return people.map(person => person.age)
+  return people.map(person => person.age);
 };
 
 const findByName = (name, people) => {
@@ -46,11 +46,20 @@ const findHondas = cars => {
 
 const averageAge = people => {
   // your code here
-  
+  const totalAge = people.reduce((acc, person) => {
+  return  acc + person.age},0)
+
+  return totalAge / people.length;
 };
 
 const createTalkingPerson = (name, age) => {
-  // your code here
+  return {
+    name,
+    age,
+    introduce(greeter) {
+      return `Hi ${greeter}, my name is ${this.name} and I am ${this.age}!`;
+    }
+  };
 };
 
 module.exports = {

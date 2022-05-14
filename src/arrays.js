@@ -48,32 +48,55 @@ const reverseWordsInArray = strings => {
 };
 
 const onlyEven = numbers => {
-  // your code here
   return numbers.filter(number => number % 2 === 0);
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  return array.filter((_, item) => item !== index);
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  return strings.filter(string => {
+    return (
+      string[0] === "a" ||
+      string[0] === "e" ||
+      string[0] === "i" ||
+      string[0] === "o" ||
+      string[0] === "u" ||
+      string[0] === "A" ||
+      string[0] === "E" ||
+      string[0] === "I" ||
+      string[0] === "O" ||
+      string[0] === "U"
+    );
+  });
 };
 
 const removeSpaces = string => {
-  // your code here
-  const removespace = (string) => string.split (' ').join('');
-  
-
+  return string.split(' ').join('');
 };
 
-const sumNumbers = numbers => {
-  // your code here
- 
-};
+const sumNumbers = numbers =>
+  numbers.reduce((acc, number) => {
+    return acc + number;
+  }, 0);
+
 
 const sortByLastLetter = strings => {
-  // your code here
+  const reverse = strings.map(string => {
+    return string
+      .split("")
+      .reverse()
+      .join("");
+  });
+  const reverseSorted = reverse.sort();
+  const finalArray = reverseSorted.map(string => {
+    return string
+      .split("")
+      .reverse()
+      .join("");
+  });
+  return finalArray;
 };
 
 module.exports = {

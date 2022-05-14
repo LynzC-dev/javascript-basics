@@ -1,16 +1,14 @@
+
 function negate(a) {
-  // your code here
   return (!a);
 };
 
 function both(a, b) {
-  // your code here
   return a && b;
-
 };
 
 function either(a, b) {
-  // your code here
+
   return a || b;
 };
 
@@ -67,11 +65,8 @@ function isEven(a) {
 };
 
 function isSquare(a) {
-  // your code here
-//  if (Number.isInteger(Math.sqrt(a))) {
-//    return true;
-//  }
-//  else return false;
+ return Boolean(Math.sqrt(a) %1 === 0);
+};
 
 function startsWith(char, string) {
   // your code here
@@ -82,12 +77,20 @@ function startsWith(char, string) {
 };
 
 function containsVowels(string) {
-  // your code here
-
+  string = string.toLowerCase();
+  if (
+    string.includes("a") ||
+    string.includes("e") ||
+    string.includes("i") ||
+    string.includes("o") ||
+    string.includes("o")
+  ) {
+    return true;
+  }
+  return false;
 };
 
-function isLowerCase(string) {
-  // your code here
+function isLowerCase (string) {
   if (string === string.toLowerCase()) {
     return true;
   }

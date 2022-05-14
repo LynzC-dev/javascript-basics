@@ -65,4 +65,4 @@ module.exports = {
   absolute,
   quotient,
   remainder
-}
+};
